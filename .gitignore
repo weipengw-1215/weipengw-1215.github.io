@@ -1,0 +1,14 @@
+# 忽略操作系统垃圾文件
+.DS_Store
+Thumbs.db
+
+# 忽略 VS Code 配置（如果使用）
+.vscode/
+
+# 忽略日志和构建
+*.log
+dist/
+node_modules/
+
+# 忽略 macOS 生成的文件
+*.DS_Store
