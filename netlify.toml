@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/protected.html"
+  to = "/"
+  status = 200
+  force = false
+  conditions = {Role = ["user"]}
