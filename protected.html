@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>受保护的页面</title>
+</head>
+<body>
+  <h2>受保护内容</h2>
+  <p>只有登录用户才能访问此页面。</p>
+
+  <button onclick="netlifyIdentity.logout()">退出登录</button>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    netlifyIdentity.init();
+
+    if (!netlifyIdentity.currentUser()) {
+      alert("请先登录！");
+      window.location.href = "/";
+    }
+
+    netlifyIdentity.on('logout', () => {
+      window.location.href = "/";
+    });
+  </script>
+</body>
+</html>
